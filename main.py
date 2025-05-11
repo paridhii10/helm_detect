@@ -7,21 +7,9 @@ from my_functions import is_bounding_box_inside, image_classify, object_detectio
 import pygame
 import threading
 
-# Initialize pygame mixer
-#pygame.mixer.init()
-
-# Function to play audio alert in a separate thread
-# def play_sound_async(file_path):
-#     print(f"Loading audio file: {file_path}")
-#     pygame.mixer.music.load(file_path)
-#     print("Audio file loaded successfully")
-#     pygame.mixer.music.play()
-#     while pygame.mixer.music.get_busy():
-#         pygame.time.Clock().tick(10)
-
 def main(ip_address):
     global main_process_pid  # Declare main_process_pid as global
-    # Create the output folder if it doesn't exist
+    
     output_folder = 'output_folder'  # Specify the output folder name
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
